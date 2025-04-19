@@ -8,7 +8,7 @@ Pequeno projeto usando oak, oauth2-client e spotify-web-api
 # O que espero aprender?
 - Como autenticar um usuário usando oauth2
 - Compreender como funciona o oak
-
+---
 
 No início do projeto ao ler a biblioteca de oauth2 que escolhi percebi que terei que gerenciar sessões de usuários e escolhi deno kv.
 
@@ -19,3 +19,4 @@ Lembrei que vou ter que aprender a também criar certificados para disponibiliza
 - para criar uma chave é só usar o seguinte comando: `openssl genrsa -out key.pem 2048`
 - como usei ia para criar os certificados não entendi muito, deverei estudar mais sobre o openssl e sobre certificados.
 
+Terei que me aprofundar um pouco no ssh-keygen já que estou tentando o utilizar para facilitar a autenticação do github.
