@@ -20,3 +20,21 @@ Lembrei que vou ter que aprender a também criar certificados para disponibiliza
 - como usei ia para criar os certificados não entendi muito, deverei estudar mais sobre o openssl e sobre certificados.
 
 Terei que me aprofundar um pouco no ssh-keygen já que estou tentando o utilizar para facilitar a autenticação do github.
+
+
+## O que tem no Context do oak?
+  Informações sobre estados, requisições, respostas, websockets e cookies além de informações sobre o app(oak).
+
+
+## Estrutura pensada até agora(30/04/25)
+- Criar funções/classe para genreciar a autenticação do spotify, a atualização dos tokens e o banco de dados que salva os tokens. 
+> [!important]
+> Estudar como o deno kv salva os dados e se separa os usuarios de forma automática
+
+- Criar funções/classe para gerenciar a api do spotify, nesse primeiro momento apenas em relação ao endpoint track
+> [!important]
+> Estudar o que é um endpoint e termos relacionados a REST e se o spotify usa realmente REST
+
+- Criar funções/classes utilitárias para facilitar a representações dos dados seja no console ou em uma ui/html
+> [!important]
+> Estudar MVC??? Ou algo parecido?
