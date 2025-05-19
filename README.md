@@ -38,3 +38,8 @@ Terei que me aprofundar um pouco no ssh-keygen já que estou tentando o utilizar
 - Criar funções/classes utilitárias para facilitar a representações dos dados seja no console ou em uma ui/html
 > [!important]
 > Estudar MVC??? Ou algo parecido?
+
+- Como cliar sessões com o deno? Qual a melhor forma de gerenciar sessões?
+
+- Qual a melhor estrutura(diretórios) para organizar o projeto?
+    - sessões, chamadas de api, design da aplicação, onde colocar funções usadas para ligar a api do spotify com o design do meu projeto

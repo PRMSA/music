@@ -1,6 +1,9 @@
 import { Application, Router } from "@oak/oak";
 import { OAuth2Client } from "@cmd-johnson/oauth2-client";
 
+
+import {getMyTracks} from "./tracks.ts";
+
 const tokensDB = await Deno.openKv()
 const client_id = Deno.env.get("SPOTIFY_CLIENT_ID");
 const secret_id = Deno.env.get("SPOTIFY_CLIENT_SECRET");
@@ -23,6 +26,12 @@ console.log("spotifyClient", await acg.getAuthorizationUri());
 
 const router = new Router();
 
+router.get('/auth', async(ctx)=>{
+	console.log(await tokensDB.get['token'])
+
+	return '';
+})
+
 router.get("/login", async (ctx)=>{
 	const res = ctx.response.redirect((await acg.getAuthorizationUri({disablePkce: true})).uri);
 	console.log("res", res);
@@ -39,17 +48,11 @@ router.get("/callback", async (ctx)=>{
 
 router.get("/", async (ctx)=>{
 	console.log("tokens", await tokensDB.get(["token"]));
-	const playlists = await fetch(
-		"https://api.spotify.com/v1/me/tracks",
-		{
-			method: "GET",
-			headers: {
-				"Authorization": "Bearer "+(await tokensDB.get(["token"])).value.accessToken
-			}
-		}
-	)
-	console.log("AccessToken: ", (await tokensDB.get(["token"])).value.accessToken);
-	console.log("playlists", await playlists.json());
+	const accessToken = (await tokensDB.get(["token"])).value.accessToken
+
+	const playlists = await fetch(getMyTracks(accessToken))
+	console.log("AccessToken: ", accessToken);
+	//console.log("playlists", await playlists.json());
 })
 
 const app = new Application();
