@@ -21,11 +21,6 @@ Lembrei que vou ter que aprender a também criar certificados para disponibiliza
 
 Terei que me aprofundar um pouco no ssh-keygen já que estou tentando o utilizar para facilitar a autenticação do github.
 
-
-## O que tem no Context do oak?
-  Informações sobre estados, requisições, respostas, websockets e cookies além de informações sobre o app(oak).
-
-
 ## Estrutura pensada até agora(30/04/25)
 - Criar funções/classe para genreciar a autenticação do spotify, a atualização dos tokens e o banco de dados que salva os tokens. 
 > [!important]
@@ -38,3 +33,6 @@ Terei que me aprofundar um pouco no ssh-keygen já que estou tentando o utilizar
 - Criar funções/classes utilitárias para facilitar a representações dos dados seja no console ou em uma ui/html
 > [!important]
 > Estudar MVC??? Ou algo parecido?
+
+## 31/05/2025
+- Decidi mudar para hono, pois parece mais completo que oak
